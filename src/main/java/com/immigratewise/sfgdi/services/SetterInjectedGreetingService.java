@@ -3,9 +3,9 @@ package com.immigratewise.sfgdi.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServicesImpl implements GreetingServices {
+public class SetterInjectedGreetingService implements GreetingServices{
     @Override
     public String sayGreeting() {
-        return "Hello World!";
+        return "Hello world! - Setter";
     }
 }

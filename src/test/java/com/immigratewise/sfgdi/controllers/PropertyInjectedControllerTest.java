@@ -1,11 +1,8 @@
 package com.immigratewise.sfgdi.controllers;
 
-import com.immigratewise.sfgdi.services.GreetingServices;
-import com.immigratewise.sfgdi.services.GreetingServicesImpl;
+import com.immigratewise.sfgdi.services.ConstructorGreetingServices;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
 
@@ -15,7 +12,7 @@ class PropertyInjectedControllerTest {
     void setUp() {
         controller = new PropertyInjectedController();
 
-        controller.greetingServices = new GreetingServicesImpl();
+        controller.greetingServices = new ConstructorGreetingServices();
     }
 
     @Test
