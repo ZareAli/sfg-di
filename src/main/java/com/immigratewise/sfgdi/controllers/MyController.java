@@ -1,11 +1,18 @@
 package com.immigratewise.sfgdi.controllers;
 
+import com.immigratewise.sfgdi.services.GreetingServices;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class MyController {
+
+    private final GreetingServices greetingServices;
+
+    public MyController(GreetingServices greetingServices) {
+        this.greetingServices = greetingServices;
+    }
+
     public String sayHello(){
-        System.out.println("Hello Spring!");
-        return "Hi Folks";
+        return greetingServices.sayGreeting();
     }
 }
